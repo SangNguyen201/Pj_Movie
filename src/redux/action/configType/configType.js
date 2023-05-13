@@ -1,0 +1,3 @@
+export const SET_CAROUSEL = "SET_CAROUSEL";
+export const SET_FILM_DANG_CHIEU = "SET_FILM_DANG_CHIEU";
+export const SET_FILM_SAP_CHIEU = "SET_FILM_SAP_CHIEU";

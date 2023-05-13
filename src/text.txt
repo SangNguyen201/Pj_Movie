@@ -1,0 +1,47 @@
+1/ set up folder redux
+    +create:
+    -action
+    -type
+    -reducer
+2/ cấu hình import { combineReducers } from "redux";
+    +quản lỷ trạng thái của store
+    +tại folder index.js bọc <App/> <Provider store={store}>
+    và  import store
+3/ cấu hình Routing
+    +npm i history@4.10.0 tương thích với react-router-dom 5.2
+    +import history
+4/ api carousel tai folder action
+
+5/ chi tiết gọi API = hook useEffect và dispatch lên Reducer = useDispatch
+   +lấy api tai folder ManageMovieService kế thừa của baseService
+   +tạo 1 reducer cho ManageMovieService tại folder ManageMovieReducer
+   +sau đó đưa dữ liệu của ManageMovieReducer tại folder reducer
+   lên configStore
+6/ tại folder HomePage dùng hook useSelector và useDispatch để render
+   +useSelector để lấy dữ liệu tại configStore
+    
+7/ render listMovie 
+   +get api từ BE về tại folder ManageMovieService
+   +tổ chức reducer của dữ liệu tại folder ManageMovieReducer : chứa dữ liệu và tổ chức action 
+   +tại folder ManageMovieAction gọi api và dùng hook useDispatch để đưa lên dữ liệu lên store
+   +tại folder hompage gọi dữ liệu = hook useSelector 
+   +dùng hook useEffect để gọi api và dispatch action
+8/ filter giá trị của phim đang chiếu và phim sắp chiếu ở folder multipleRowSlick
+   + viết func dispatch lên reducer :
+     - tạo type : SET_FILM_DANG_CHIEU 
+     - khai báo type tại folder type action configtype 
+     - tạo sự kiện onClick : khai báo action = type SET_FILM_DANG_CHIEU
+     dispatch lên reducer
+9/làm việc với api folder HomeMenu 
+   +lấy api về tại folder services file ManageRapService
+   +tại folder reducer tạo file
+   +gắn reducer vào store để sử dụng tại configStore
+   +kết nối dữ liệu với api tạo file action
+   +để dispatch lên reducer tại file ManageMovieAction thì tạo ra 1 cái file tại redux->configtype
+10/ detail page 
+   +khởi tạo filmDetail: {},
+   +lấy api về tại ManageRapService
+   +tạo action SET_CHI_TIET_PHIM tại folder type file a ManageRapType để đẩy lên reducer
+   +tại folder ManageRapAction tạo 1 action layThongTinChiTietPhim
+   +sau khi lấy đc dữ liệu reducer
+   +tạo 1 case SET_CHI_TIET_PHIM tại folder ManageMovieReducer

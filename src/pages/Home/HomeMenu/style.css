@@ -1,0 +1,13 @@
+.style_menu {
+  border: 1px solid rgb(191, 191, 191);
+  padding: 10px;
+}
+.ant-tabs-nav-list {
+  cursor: pointer;
+}
+.ant-tabs-nav {
+  border-right: 1px solid rgb(191, 191, 191) !important;
+}
+.ant-tabs-content .ant-tabs-content-left {
+  margin-left: 5px;
+}

@@ -1,0 +1,14 @@
+.slick-prev:before,
+.slick-next:before {
+  font-size: 1.6rem !important;
+}
+.active_film {
+  color: #34b0f8;
+  font-weight: 500;
+  font-size: 18px;
+}
+.non_active_film {
+  color: #000;
+  font-weight: 500;
+  font-size: 18px;
+}

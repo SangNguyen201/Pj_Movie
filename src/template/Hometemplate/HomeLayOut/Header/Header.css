@@ -1,0 +1,14 @@
+.border-b-2 {
+  border-bottom-width: 0 !important;
+}
+.header_nav {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px !important;
+  color: whitesmoke;
+}
+.btn {
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #34b0f8;
+  font-weight: 500;
+}
